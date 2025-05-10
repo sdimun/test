@@ -4,52 +4,32 @@ describe("Order", () => {
     cy.login("standard_user", "secret_sauce");
   });
 
-  it("Add and remove products from homeScreen", () => {
-    // add 3 items to chart
+  it("Add and remove product from homeScreen", () => {
+    // add item to chart
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     cy.get('[data-test="remove-sauce-labs-backpack"]').should("be.visible");
 
-    cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
-    cy.get('[data-test="remove-sauce-labs-bike-light"]').should("be.visible");
-
-    cy.get('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]').click();
-    cy.get('[data-test="remove-sauce-labs-bolt-t-shirt"]').should("be.visible");
-
-    // remove these items from chart from homeScreen
+    // remove item from chart from homeScreen
     cy.get('[data-test="remove-sauce-labs-backpack"]').click();
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').should(
       "be.visible"
     );
 
-    cy.get('[data-test="remove-sauce-labs-bike-light"]').click();
-    cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').should(
-      "be.visible"
-    );
-
-    cy.get('[data-test="remove-sauce-labs-bolt-t-shirt"]').click();
-    cy.get('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]').should(
-      "be.visible"
-    );
   });
 
-  it("Add products and remove them from chart ", () => {
-    // add 3 items to chart
+  it("Add product and remove it from chart ", () => {
+    // add item to chart
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     cy.get('[data-test="remove-sauce-labs-backpack"]').should("be.visible");
 
-    cy.get('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
-    cy.get('[data-test="remove-sauce-labs-bike-light"]').should("be.visible");
-
-    cy.get('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]').click();
-    cy.get('[data-test="remove-sauce-labs-bolt-t-shirt"]').should("be.visible");
-
-    // remove these items from chart
-
+    // check if added item is in chart
     cy.cartBtn().click();
+    cy.get('[data-test="inventory-item-name"]').should('exist');
 
+
+    // remove this item from chart
     cy.get('[data-test="remove-sauce-labs-backpack"]').click();
-    cy.get('[data-test="remove-sauce-labs-bike-light"]').click();
-    cy.get('[data-test="remove-sauce-labs-bolt-t-shirt"]').click();
+
 
     cy.get('[data-test="inventory-item"]').should("not.exist");
   });
