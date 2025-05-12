@@ -1,0 +1,113 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh12080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 TC3\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 Add/remove product from Eshop page\
+Precondition: User is on https://www.saucedemo.com/inventory.html page after successful login with valid credentials\
+\
+1)\
+When user clicks on add to cart btn for first product\
+\
+Then product is in cart\
+And remove btn is displayed instead of add to cart btn\
+And colour of btn is red\
+\
+2)\
+When user clicks on remove btn on same product\
+\
+Then product is removed from cart\
+And add to cart btn is displayed instead of add to cart btn\
+And colour of btn is black\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 TC4\
+
+\f0\b0 Add product to cart and remove it from cart page\
+Precondition: User is on https://www.saucedemo.com/inventory.html page after successful login with valid credentials\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+1)\
+When user clicks on add to cart btn\
+And click on cart icon\
+\
+Then user is on cart page\
+And one product is displayed in your cart\
+\
+2)\
+When user clicks on remove btn of that product\
+\
+Then product item should disappear\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 TC5\
+
+\f0\b0 Perform full order with 2 products\
+Precondition: User is on https://www.saucedemo.com/inventory.html page after successful login with valid credentials\
+\
+1)\
+When user clicks on add to cart btn for first product\
+\
+Then product is in cart\
+And remove btn is displayed instead of add to cart btn\
+And colour of btn is red\
+\
+2)\
+When user clicks on add to cart btn for second product\
+\
+Then product is in cart\
+And remove btn is displayed instead of add to cart btn\
+And colour of btn is red\
+\
+3)\
+When user clicks on cart icon\
+\
+Then user is on cart page\
+And 2 products are displayed in your cart\
+\
+4)\
+When user clicks on checkout btn\
+\
+Then user is on checkout screen\
+\
+5)\
+When user enters First name, Last name, ZIP code\
+And click on continue btn\
+\
+Then user is on overview screen\
+\
+6)\
+When user clicks on finish btn\
+\
+Then is on complete screen\
+And order has been completed\
+\
+7)\
+When user click on back home btn\
+\
+Then user is on Eshop page\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
