@@ -1,10 +1,16 @@
 ## Installation
 
+### Cypress
+
 Install [Cypress](https://learn.cypress.io/testing-your-first-application/installing-cypress-and-writing-your-first-test) testing framework.
 
 ```bash
 npm install cypress --save-dev
 ```
+
+### Node.JS
+
+Cypress requires Node.js 18.x or older. You can install it from [Node.js](https://nodejs.org/en/download).
 
 ## How to run tests
 
