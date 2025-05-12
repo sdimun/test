@@ -22,20 +22,18 @@ describe("Order", () => {
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     cy.get('[data-test="remove-sauce-labs-backpack"]').should("be.visible");
 
-    // check if added item is in chart
+    // check if added item is in cart
     cy.cartBtn().click();
     cy.get('[data-test="inventory-item-name"]').should('exist');
 
-
-    // remove this item from chart
+    // remove this item from cart
     cy.get('[data-test="remove-sauce-labs-backpack"]').click();
-
 
     cy.get('[data-test="inventory-item"]').should("not.exist");
   });
 
   it("Full order with 2 items", () => {
-    // add 2 items to chart
+    // add 2 items to cart
     cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
     cy.get('[data-test="remove-sauce-labs-backpack"]').should("be.visible");
 
